@@ -1,6 +1,6 @@
-#include <stdio.h> // função básica
-#include <locale.h> //ajustar texto portugues
-#include <windows.h> //ajustar cor o sistema
+#include <stdio.h>
+#include <locale.h>
+
 
 int main()
 {
@@ -8,7 +8,7 @@ int main()
 	
 	float nota_1, nota_2, media;
 	
-	//system("color x") mostra as cores do sistema
+	
 	printf("\nInsira a 1º nota:");
 	scanf("%f", &nota_1);
 	
@@ -19,13 +19,19 @@ int main()
 	
 	if(media >= 6.0 )
 	{
-		system("color 02");
 		printf("\nVocê foi aprovado!");
 		printf("\nSua nota final foi:%.2f", media);
 	}
+	
+	else if(media >= 4 && media < 6)
+	{
+		printf("\nVocê está de recuperação :(");
+		printf("\nSua média final foi:%.2f", media);
+	}
+	
 	else
 	{
-		printf("\nVocê foi reprovado :(");
+		printf("\nVocê reprovado :(");
 		printf("\nSua média final foi:%.2f", media);
 	}
 }
